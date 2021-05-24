@@ -1,6 +1,6 @@
 {
-  "name": "react-native-keychain",
-  "version": "7.0.0",
+  "name": "@npm/react-native-keychain",
+  "version": "0.0.2",
   "description": "Keychain Access for React Native",
   "main": "index.js",
   "files": [
@@ -27,12 +27,12 @@
     "keychain"
   ],
   "author": {
-    "name": "Joel Arvidsson",
-    "email": "joel@oblador.se"
+    "name": "Kirill Lebedev",
+    "email": "lebedevki@lad24.ru"
   },
-  "homepage": "https://github.com/oblador/react-native-keychain",
+  "homepage": "https://glab.lad24.ru/npm/react-native-keychain",
   "bugs": {
-    "url": "https://github.com/oblador/react-native-keychain/issues"
+    "url": "https://glab.lad24.ru/npm/react-native-keychain/issues"
   },
   "typescript": {
     "definition": "typings/react-native-keychain.d.ts"
@@ -40,7 +40,10 @@
   "types": "typings/react-native-keychain.d.ts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/oblador/react-native-keychain.git"
+    "url": "https://glab.lad24.ru/npm/react-native-keychain"
+  },
+  "publishConfig": {
+    "@npm:registry":" https://glab.lad24.ru/api/v4/projects/609/packages/npm/"
   },
   "license": "MIT",
   "devDependencies": {

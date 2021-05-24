@@ -14,6 +14,26 @@ this repo library without warmingUp and usage only CipherStorageKeystoreAesCbc
 
 https://github.com/oblador/react-native-keychain/issues/314
 
+
+# Обновление пакета 
+
+1. Подтянуть изменения с https://github.com/oblador/react-native-keychain
+
+2. Создать в репозитории файл .npmrc
+```
+@npm:registry=https://glab.lad24.ru/api/v4/packages/npm/
+
+//glab.lad24.ru/api/v4/projects/609/packages/npm/:_authToken=<GATLAB_ACCESS_TOKEN>
+
+//glab.lad24.ru/api/v4/packages/npm/:_authToken=<GATLAB_ACCESS_TOKEN>
+```
+
+3. Поменять версию в package.json и запушить изменения
+
+4. npm publish 
+
+5. Проверить, что пакет обновился тут https://glab.lad24.ru/npm/registry/-/packages
+
 # Keychain/Keystore Access for React Native
 
 - [Keychain/Keystore Access for React Native](#keychainkeystore-access-for-react-native)
