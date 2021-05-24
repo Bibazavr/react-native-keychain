@@ -1,5 +1,6 @@
 package com.oblador.keychain;
 
+import android.media.MediaDrm;
 import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
@@ -140,23 +141,26 @@ public class KeychainModule extends ReactContextBaseJavaModule {
     super(reactContext);
     prefsStorage = new PrefsStorage(reactContext);
 
-    addCipherStorageToMap(new CipherStorageFacebookConceal(reactContext));
+    // Usage only CipherStorageKeystoreAesCbc because affect long loading on some devices https://github.com/oblador/react-native-keychain/issues/314
+//    addCipherStorageToMap(new CipherStorageFacebookConceal(reactContext));
     addCipherStorageToMap(new CipherStorageKeystoreAesCbc());
 
+    // Usage only CipherStorageKeystoreAesCbc https://github.com/oblador/react-native-keychain/issues/314
     // we have a references to newer api that will fail load of app classes in old androids OS
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-      addCipherStorageToMap(new CipherStorageKeystoreRsaEcb());
-    }
+//    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//      addCipherStorageToMap(new CipherStorageKeystoreRsaEcb());
+//    }
   }
 
   /** Allow initialization in chain. */
   public static KeychainModule withWarming(@NonNull final ReactApplicationContext reactContext) {
     final KeychainModule instance = new KeychainModule(reactContext);
 
+    //warmingUp affect long loading on some devices (20000 ms) https://github.com/oblador/react-native-keychain/issues/314
     // force initialization of the crypto api in background thread
-    final Thread warmingUp = new Thread(instance::internalWarmingBestCipher, "keychain-warming-up");
-    warmingUp.setDaemon(true);
-    warmingUp.start();
+//    final Thread warmingUp = new Thread(instance::internalWarmingBestCipher, "keychain-warming-up");
+//    warmingUp.setDaemon(true);
+//    warmingUp.start();
 
     return instance;
   }
