@@ -53,10 +53,10 @@ declare module 'react-native-keychain' {
   }
 
   export enum STORAGE_TYPE {
-    FB = 'FacebookConceal',
+    // FB = 'FacebookConceal',
     AES = 'KeystoreAESCBC',
-    RSA = 'KeystoreRSAECB',
-    KC = 'keychain',
+    // RSA = 'KeystoreRSAECB',
+    // KC = 'keychain',
   }
 
   export enum SECURITY_RULES {

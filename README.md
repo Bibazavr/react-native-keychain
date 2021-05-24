@@ -8,6 +8,12 @@
 
 [![Travis](https://img.shields.io/travis/oblador/react-native-keychain.svg)](https://travis-ci.org/oblador/react-native-keychain) [![npm](https://img.shields.io/npm/v/react-native-keychain.svg)](https://npmjs.com/package/react-native-keychain) [![npm](https://img.shields.io/npm/dm/react-native-keychain.svg)](https://npmjs.com/package/react-native-keychain)
 
+# This is fork!
+
+this repo library without warmingUp and usage only CipherStorageKeystoreAesCbc
+
+https://github.com/oblador/react-native-keychain/issues/314
+
 # Keychain/Keystore Access for React Native
 
 - [Keychain/Keystore Access for React Native](#keychainkeystore-access-for-react-native)
@@ -262,9 +268,10 @@ If set, `securityLevel` parameter specifies minimum security level that the encr
 
 | Key   | Description                            |
 | ----- | -------------------------------------- |
-| `FB`  | Facebook compatibility cipher          |
 | `AES` | Encryptions without human interaction. |
-| `RSA` | Encryption with biometrics.            |
+
+[comment]: <> (| `FB`  | Facebook compatibility cipher          |)
+[comment]: <> (| `RSA` | Encryption with biometrics.            |)
 
 #### `Keychain.SECURITY_RULES` enum (Android only)
 
